@@ -1,0 +1,32 @@
+.button {
+    height: 40px;
+    padding: 0 15px;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: $color-orange;
+    transition: background-color .2s ease, color .2s ease;
+
+    @media (min-width: $device-md) {
+        padding: 0 27px;
+        font-size: 16px;
+    }
+
+    &--big {
+        height: 70px;
+        font-size: 16px;
+        line-height: 70px;
+
+        @media (min-width: $device-md) {
+            height: 96px;
+            font-size: 36px;
+            line-height: 96px;
+        } 
+    }
+
+    &:disabled {
+        background-color: rgba($color-orange, .7);
+    }
+}

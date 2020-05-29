@@ -1,0 +1,27 @@
+.title {
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    color: #020202;
+
+    @media (min-width: $device-md) {
+        margin-bottom: 16px;
+        font-size: 40px;
+        line-height: 52px;
+    }
+
+    @media (min-width: $device-xl) {
+        margin-bottom: 36px;
+        font-size: 60px;
+        line-height: 72px;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &--white {
+        color: $color-white;
+    }
+}

@@ -1,0 +1,14 @@
+.container {
+    padding-right: 7px;
+    padding-left: 7px;
+
+    @media (min-width: $device-md) {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    @media (min-width: $device-xl) {
+        padding-right: 95px;
+        padding-left: 95px;
+    }
+}
