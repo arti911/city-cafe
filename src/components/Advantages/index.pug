@@ -1,0 +1,28 @@
+<div class="advantages" id="3">
+  <div class="advantages__title title">Почему клиенты выбирают нас</div>
+  <div class="advantages__text">Многолетний опыт позволил нам разработать лучшие практики на основе корпоративных стандартов, внедрить систему управления процессами и ресурсами компании. Мы гарантируем снижение издержек, высокую производительность труда нашего персонала и прозрачность прогнозируемых расходов. Работая с нами, вы можете быть уверены в безупречном качестве услуги.</div>
+  <div class="advantages__container">
+    <div class="advantages__subtitle">ЦЕНТР ЗДОРОВОГО ПИТАНИЯ</div>
+    <div class="advantages__logo">
+      <div class="advantages__logo-img">
+        <svg>
+          <use xlink:href="#logo-menu" />
+        </svg>
+      </div>
+      <div class="advantages__logo-text">Ключевые факторы преимущества</div>
+    </div>
+    <div class="advantages__services">
+      <figure class="advantages__item" v-for="service in servs" :key="service.id">
+        <div class="advantages__img" :class="'advantages__img--' + service.icon">
+          <svg>
+            <use :xlink:href="'#' + service.icon" />
+          </svg>
+        </div>
+        <figcaption>
+          <div class="advantages__name">{{ service.title }}</div>
+          <div class="advantages__desc">{{ service.desc }}</div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>

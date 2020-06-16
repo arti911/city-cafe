@@ -1,43 +1,34 @@
 {
-  "name": "city_cafe",
-  "version": "0.1.0",
-  "private": true,
+  "name": "template_papikyan_artur",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "start": "parcel src/pages/index.pug --open",
+    "build": "parcel build src/pages/index.pug"
+  },
+  "author": "Papikyan Artur",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2",
+    "pug": "^2.0.4",
+    "sass": "^1.22.9",
+    "stylelint-config-airbnb": "0.0.0",
+    "stylelint-config-recommended": "^2.2.0"
   },
   "dependencies": {
-    "core-js": "^3.6.4",
+    "@fortawesome/fontawesome-free": "^5.10.1",
+    "normalize.css": "^8.0.1",
+    "stylelint": "^10.1.0",
+    "stylelint-scss": "^3.10.0",
     "swiper": "^5.4.1",
-    "vue": "^2.6.11",
-    "vue-parallax-js": "^0.2.3",
-    "vue-yandex-maps": "^0.10.7"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.3.0",
-    "@vue/cli-plugin-eslint": "~4.3.0",
-    "@vue/cli-service": "~4.3.0",
-    "@vue/eslint-config-standard": "^5.1.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "lint-staged": "^9.5.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
+    "vue-yandex-maps": "^0.10.7",
+    "vue-parallax-js": "^0.2.3"
   }
 }

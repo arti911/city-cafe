@@ -1,0 +1,17 @@
+<div class="contacts" id="4">
+    <div class="contacts__addresses">
+      <div class="title">Контакты</div>
+      <div class="contacts__lists">
+        <div class="contacts__item" :class="isActiveCity === city.id ? 'contacts__item--open' : ''" v-for="city in cities" :key="city.id">
+          <button class="contacts__city" @click="showPlace(city.id, city.coords)">{{ city.title }} <svg><use xlink:href="#arrow" /></svg>
+          </button>
+          <div class="contacts__description" v-html="city.more" v-if="isActiveCity === city.id"></div>
+        </div>
+      </div>
+    </div>
+    <div class="contacts__map">
+      <yandex-map :settings="settings" :coords="center" :controls="controls" :zoom="zoom" :scroll-zoom="!(window.innerWidth <= 1024)">
+        <ymap-marker marker-id="cafe" :coords="center" :icon="markerIcon" />
+      </yandex-map>
+    </div>
+</div>
