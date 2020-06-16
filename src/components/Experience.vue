@@ -23,16 +23,16 @@
       </div>
     </div>
     <div class="experience__img">
-      <div class="swiper-container swiper-container-img">
+      <div class="swiper-container swiper-container-img swiper-no-swiping">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="~@/assets/images/img.jpg" alt="">
           </div>
           <div class="swiper-slide">
-            <img src="~@/assets/images/img.jpg" alt="">
+            <img src="~@/assets/images/school.png" alt="">
           </div>
           <div class="swiper-slide">
-            <img src="~@/assets/images/img.jpg" alt="">
+            <img src="~@/assets/images/medicine.jpg" alt="">
           </div>
         </div>
       </div>
@@ -51,10 +51,8 @@ export default {
   methods: {
     initSlider () {
       const images = new Swiper('.swiper-container-img', {
+        preventInteractionOnTransition: true,
         loop: true,
-        freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
         effect: 'fade'
       })
 
@@ -138,10 +136,6 @@ $experience: experience;
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    .swiper-container-img {
-      pointer-events: none;
     }
   }
 

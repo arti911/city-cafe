@@ -215,6 +215,7 @@ $modal: modal;
     height: 180px;
     padding: 12px 5px;
     border: 1px solid #979797;
+    resize: none;
 
     &::-moz-placeholder {
       font-family: 'Roboto';

@@ -33,6 +33,7 @@ export default {
   },
   data: () => {
     return {
+      scrollMap: window.innerWidth <= 1024,
       isActiveCity: 0,
       cities: [
         {
@@ -228,10 +229,15 @@ $contacts: contacts;
   }
 
   &__map {
+    position: relative;
     overflow: hidden;
 
     & > section {
       height: 100%;
+
+      @media (max-width: $device-lg) {
+        pointer-events: none;
+      }
     }
   }
 
