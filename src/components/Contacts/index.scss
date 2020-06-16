@@ -1,0 +1,123 @@
+$contacts: contacts;
+
+.#{$contacts} {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 454px;
+  background: $color-white;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.58);
+
+  @media (min-width: $device-xl) {
+    grid-template-rows: auto 752px;
+  }
+
+  @media (min-width: $device-xl) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  &__addresses {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 40px;
+
+    padding: 60px 20px 40px;
+
+    @media (min-width: $device-md) {
+      gap: 50px;
+      padding: 100px 50px;
+    }
+
+    @media (min-width: $device-xl) {
+      gap: 30px;
+      padding: 60px 50px 65px;
+    }
+  }
+
+  &__lists {
+    width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: $device-xl) {
+      max-width: 670px;
+    }
+  }
+
+  &__item {
+    padding: 8px 0;
+    border-bottom: 1px solid #979797;
+
+    &--open {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__city {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 52px;
+    color: #020202;
+
+    @media (min-width: $device-md) {
+      font-size: 36px;
+      line-height: 52px;
+    }
+
+    svg {
+      width: 20px;
+      height: 30px;
+      transition: transform .2s ease;
+    }
+  }
+
+  &__description {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 20px;
+    padding: 12px 0 36px;
+
+    @media (min-width: $device-md) {
+      padding: 23px 0 5px;
+      gap: 16px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.235714px;
+    color: #222222;
+
+    @media (min-width: $device-md) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  &__map {
+    overflow: hidden;
+
+    @media (max-width: $device-lg) {
+      pointer-events: none;
+    }
+
+    & > section {
+      height: 100%;
+    }
+  }
+
+  .title {
+    width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: $device-xl) {
+      max-width: 670px;
+    }
+  }
+}

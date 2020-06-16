@@ -1,0 +1,47 @@
+<header class="header">
+    <div class="header__container container">
+      <div class="header__logo">
+        <svg>
+          <use xlink:href="#logo" />
+        </svg>
+      </div>
+      <div class="header__burger" @click="toggleMenu" :class="showMenu ? 'header__burger--close' : '' ">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="header__buttons">
+        <button @click="openModal">Связаться с нами</button>
+        <button>События компании</button>
+      </div>
+      <div class="header__phones">
+        <div class="header__phone">г. Ульяновск
+          <a href="tel:88422335445">8 (8422) 33-54-45</a>
+        </div>
+        <div class="header__phone">г. Москва
+          <a href="tel:">8 (495) 744-66-25</a>
+        </div>
+        <button class=" header__btn button">Оставить отзыв</button>
+      </div>
+    </div>
+    <nav class="header__navigation" :class="showMenu ? 'header__navigation--mobile header__navigation--show' : ''">
+      <div class="header__wrap" @click="toggleMenu"></div>
+      <div class="header__menu">
+        <div class="header__menu-item" v-for="(link, index) in links" :key="link.id" :class="link.title === '' ? 'header__menu-item--logo' : ''">
+          <button v-if="!link.href" @click="scroll(index)">
+            <span v-if="link.title !== ''">{{ link.title }}
+            </span>
+            <span v-else>
+              <svg class="absolute">
+                <use xlink:href="#logo-menu" />
+              </svg>
+              <svg class="hidden">
+                <use xlink:href="#logo-menu" />
+              </svg>
+            </span>
+          </button>
+          <a :href="link.href" target="_blank" v-else>{{ link.title }}</a>
+        </div>
+      </div>
+    </nav>
+</header>

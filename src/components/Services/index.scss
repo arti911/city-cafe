@@ -1,0 +1,182 @@
+$services: services;
+
+.#{$services} {
+  display: grid;
+  grid-template-rows: auto 334px 334px 334px 334px;
+  grid-template-areas:
+      "desc"
+      "medic"
+      "school"
+      "kids"
+      "commerce";
+
+  @media (min-width: $device-md) {
+    grid-template-rows: auto 400px 400px;
+    grid-template-areas:
+      "desc desc"
+      "medic school"
+      "kids commerce";
+  }
+
+  @media (min-width: $device-xl) {
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "desc medic school"
+      "desc kids commerce";
+  }
+
+  &__description {
+    position: relative;
+    z-index: 2;
+    grid-area: desc;
+    padding: 120px 25px 84px;
+    background:
+      url('./assets/images/background_top_left.png') left top no-repeat,
+      url('./assets/images/background_back_right.png') right bottom no-repeat;
+    background-size: auto;
+    background-color: #000;
+    color: $color-white;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color-orange;
+      mix-blend-mode: screen;
+    }
+
+    @media (min-width: $device-md) {
+      padding: 100px 15px 60px;
+    }
+
+    @media (min-width: $device-xl) {
+      padding: 100px 15px 35px;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+
+    @media (min-width: $device-md) {
+      max-width: 600px;
+    }
+  }
+
+  &__title.title {
+    margin-bottom: 32px;
+
+    @media (min-width: $device-md) {
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: $device-xl) {
+      margin-bottom: 44px;
+    }
+  }
+
+  &__list {
+    margin: 25px 0;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.0428571px;
+    text-transform: uppercase;
+
+    @media (min-width: $device-md) {
+      margin: 52px 0 35px;
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 0.0642857px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 12px;
+      margin-bottom: 16px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        background-color: $color-white;
+        transform: translateY(-50%) rotate(45deg);
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.0428571px;
+
+    @media (min-width: $device-md) {
+      margin-bottom: 35px;
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 0.0642857px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 12px 24px;
+    color: $color-white;
+
+    @media (min-width: $device-md) {
+      padding: 0 25px 24px;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--medicine {
+      grid-area: medic;
+    }
+
+    &--school {
+      grid-area: school;
+    }
+
+    &--kids {
+      grid-area: kids;
+    }
+
+    &--commerce {
+      grid-area: commerce;
+    }
+  }
+
+  &__title {
+    z-index: 1;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+
+    @media (min-width: $device-xl) {
+      font-size: 32px;
+      line-height: 48px;
+    }
+  }
+}

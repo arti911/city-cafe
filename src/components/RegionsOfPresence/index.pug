@@ -1,0 +1,24 @@
+<div class="regions">
+    <div class="title">Регионы присутствия</div>
+    <div class="regions__container">
+      <div class="regions__info">
+        <div class="regions__wrap">
+          <div class="regions__list">
+            <div class="regions__item" v-for="region in regions" :key="region.id">
+              <div class="regions__title">{{ region.title }}</div>
+              <div class="regions__separator"></div>
+              <div class="regions__text" v-html="region.desc"></div>
+            </div>
+          </div>
+          <div class="regions__contacts">
+            <div class="regions__title">Центральный офис</div>
+            <div class="regions__text">г. Москва, ул. Пресненская набережная, д.6, стр. 2, 25 этаж, Деловой комплекс "Империя" ММДЦ "Москва-Сити"</div>
+          </div>
+        </div>
+      </div>
+      <div class="regions__map">
+        <img src="../assets/images/map.png" alt="" class="regions__img">
+      </div>
+    </div>
+</div>
+  

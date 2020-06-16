@@ -1,0 +1,21 @@
+<div class="services" id="1">
+    <div class="services__description">
+      <div class="services__wrap">
+        <div class="services__title title title--center title--white">Оказываем услуги кейтеринга</div>
+        <p class="services__text">Наша компания обладает всеми необходимыми компетенциями по четырем направлениям деятельности:</p>
+        <ul class="services__list">
+          <li>Питание в дошкольных учреждениях</li>
+          <li>Школьное питание</li>
+          <li>Лечебное питание</li>
+          <li>Корпоративное питание</li>
+        </ul>
+        <p class="services__text">Жюри Всероссийского конкурса по организации питания в школах, в 2019 году признало наш Ульяновский опыт лучшим в стране.</p>
+        <p class="services__text">Компания Город кафе является активным участником общественного процесса по улучшению и стандартизации социального питания в Российской Федерации.</p>
+      </div>
+    </div>
+    <div class="services__item" :class="'services__item--' + service.className" v-for="service in services" :key="service.id">
+      <img :src="service.img" :alt="service.title">
+      <div class="services__title">{{ service.title }}</div>
+    </div>
+</div>
+  

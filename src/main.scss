@@ -1,6 +1,28 @@
-@import './styles/base.scss';
-@import './styles/button.scss';
-@import './styles/container.scss';
-@import './styles/swipre-custom.scss';
-@import './styles/text.scss';
-@import './styles/title.scss';
+@import './styles/style.scss';
+
+#app {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+  }
+  
+  .main {
+    background: $color-white;
+  }
+
+@import './components/Header/index.scss';
+@import './components/MainSlider/index.scss';
+@import './components/About/index.scss';
+@import './components/TopFive/index.scss';
+@import './components/Services/index.scss';
+@import './components/RegionsOfPresence/index.scss';
+@import './components/Outsourcing/index.scss';
+@import './components/Advantages/index.scss';
+@import './components/Experience/index.scss';
+@import './components/Documents/index.scss';
+@import './components/Contacts/index.scss';
+@import './components/Contact/index.scss';
+@import './components/Feedback/index.scss';
+@import './components/Footer/index.scss';
+@import './components/Modal/index.scss';

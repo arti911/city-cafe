@@ -1,0 +1,24 @@
+<div class="outsourcing" id="2">
+    <div class="outsourcing__menu">
+      <div class="outsourcing__wrap">
+        <div class="title title--white">Полный аутсорсинг услуг</div>
+      </div>
+      <div class="outsourcing__list">
+        <div class="outsourcing__list-item" v-for="item in menu" :key="item.id">
+          <button class="outsourcing__btn" :class="isActive === item.id ? 'outsourcing__btn--active' : ''" @click="isActive = item.id">
+            <span>{{ item.title }}</span>
+          </button>
+          <div class="outsourcing__content-mobile" v-if="isActive === item.id">
+            <div class="outsourcing__item" v-html="item.content">
+              <div  ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="outsourcing__content">
+      <div class="outsourcing__item" v-html="menu[isActive].content">
+        <div  ></div>
+      </div>
+    </div>
+</div>
